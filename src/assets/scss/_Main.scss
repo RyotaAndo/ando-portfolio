@@ -1,0 +1,59 @@
+@use "_Forward" as var;
+html {
+    min-height: 100%;
+}
+
+.Main {
+    @extend .text--title-2;
+    min-height: 100%;
+    padding-bottom: 64px;
+    width: -webkit-fill-available;
+    background-color: var.$color--background-main;
+    .Main--content {
+        padding: 0 32px;
+    }
+}
+
+.Main {
+    animation-name: mainFadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    @keyframes mainFadeIn {
+        0% {
+            opacity: 0.1;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+
+/* 959px以下に適用されるCSS（タブレット用） */
+
+@media screen and (max-width: 959px) {}
+
+
+/* 480px以下に適用されるCSS（スマホ用） */
+
+@media screen and (max-width: 480px) {
+    .Main {
+        top: 0;
+        padding-bottom: 24px;
+        width: 100%;
+        .Main--content {
+            width: auto !important;
+            min-height: 1200px;
+            z-index: 1;
+            padding: 0 16px 16px 16px;
+            margin-bottom: 100px;
+            .MainContentImgArea {
+                .MainContentImg {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

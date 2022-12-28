@@ -1,0 +1,37 @@
+@use "_Forward" as var;
+.Stack {
+    height: 150px;
+    .StackHeader {
+        display: flex;
+        .StackHeaderLeft {
+            .StackHeaderLeft__front {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50px;
+                width: 200px;
+                height: 100px;
+                z-index: 3;
+                background-color: var.$color--front-box;
+                .Stack__title--txt {
+                    @extend .text--title-1__bold;
+                    justify-content: baseline;
+                    border-bottom: 3px solid var.$color-deep-blue--main;
+                    letter-spacing: 0.8px;
+                }
+            }
+            .StackHeaderLeft__back {
+                position: absolute;
+                left: 120px;
+                width: 200px;
+                height: 100px;
+                z-index: 2;
+                background-color: var.$color--back-box;
+            }
+        }
+    }
+    .StackArea {
+        height: auto;
+    }
+}

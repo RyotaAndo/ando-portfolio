@@ -1,0 +1,10 @@
+@use "_Forward" as var;
+.Layer {
+    .LayerHeader {
+        width: auto;
+        margin: 32px 0;
+    }
+    .LayerContent {
+        // margin-top: 32px;
+    }
+}

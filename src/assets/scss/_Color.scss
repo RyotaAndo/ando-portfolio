@@ -1,0 +1,36 @@
+:root {
+    @media (prefers-color-schema: light) {
+        --background--main: #fff;
+        --background--content-main: rgb(228, 224, 224);
+        --text--main: #4a4a4a;
+        --text--gray: #a1a1a1;
+        --text--blue: #50b9d7;
+        --text--light--blue: #a2e2f3;
+        --text--white-blue: #ddfcff;
+        --text--green: #12e242;
+        --text--deep-blue: #0c5ed8;
+    }
+    @media (prefers-color-schema: dark) {
+        --background--main: #1f1f1f;
+        --background--content-main: rgb(95, 95, 95);
+        --text--main: #fff;
+        --text--gray: #a1a1a1;
+        --text--blue: #50b9d7;
+        --text--light--blue: #a2e2f3;
+        --text--white-blue: #627272;
+        --text--green: #12e242;
+        --text--deep-blue: #0c5ed8;
+    }
+}
+
+$color--background-main: #fff;
+$color--background-content--main: rgb(228, 224, 224);
+$color--front-box: #e0e9d8;
+$color--back-box: #d4ff29;
+$color-text--main: #4a4a4a;
+$color-gray--main: #a1a1a1;
+$color-blue--main: #50b9d7;
+$color-light-blue--main: #a2e2f3;
+$color-white-blue--main: #ddfcff;
+$color-green--main: #12e242;
+$color-deep-blue--main: #0c5ed8;
