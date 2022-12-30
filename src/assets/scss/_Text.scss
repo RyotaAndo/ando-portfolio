@@ -1,4 +1,5 @@
 @use "_Color" as var;
+
 @mixin font($size: 16px, $color: var.$color-text--main, $weight: 400) {
     font-family: Helvetica, "游ゴシック", "Yu Gothic", YuGothic, HiraKakuProN-W3, "メイリオ", Meiryo, sans-serif;
     font-size: $size;
@@ -30,6 +31,10 @@
     @include font($size: 20px);
 }
 
+.text--title-2__wh {
+    @include font($size: 20px, $color: var.$color--white-main);
+}
+
 .text--title-2__bold {
     @include font($size: 20px, $weight: 600);
 }
@@ -38,12 +43,20 @@
     @include font($size: 18px);
 }
 
+.text--title-3__wh {
+    @include font($size: 18px, $color: var.$color--white-main);
+}
+
 .text--title-3__bold {
     @include font($size: 18px, $weight: 600);
 }
 
 .text--title-4 {
     @include font($size: 16px);
+}
+
+.text--title-4__wh {
+    @include font($size: 16px, $color: var.$color--white-main);
 }
 
 .text--title-4_caption {
