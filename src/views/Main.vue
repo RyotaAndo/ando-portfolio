@@ -39,6 +39,18 @@
           </div>
         </template>
       </LayerContent>
+      <LayerContent>
+        <template #header>
+          <Stack contentId="career" title="Career" />
+        </template>
+        <template #content>
+          <div class="Career">
+            <div class="CareerContent">
+              test
+            </div>
+          </div>
+        </template>
+      </LayerContent>
     </div>
   </div>
 </template>
