@@ -11,6 +11,24 @@ html {
     background-color: var.$color--background-main;
     .Main--content {
         padding: 0 32px;
+        .Top {
+            display: flex;
+            .TopImageArea {
+                position: relative;
+                .TopImage {
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+                .TopImage__txt {
+                    @extend .text--top-title;
+                    width: -webkit-fill-available;
+                    -webkit-text-stroke: 2px var.$color-deep-blue--main;
+                    position: absolute;
+                    text-align: center;
+                    top: 35%;
+                }
+            }
+        }
     }
 }
 

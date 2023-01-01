@@ -1,12 +1,20 @@
 <template>
   <div class="Main">
     <div class="Main--content">
+      <div class="Top">
+        <div class="TopImageArea">
+          <img class="TopImage" src="../assets/img/img_top.png" alt="" />
+          <div class="TopImage__txt">人との出会いに感動を</div>
+          <!-- /.TopImage__txt -->
+        </div>
+        <!-- /.TopImageArea -->
+      </div>
+      <!-- /.Top -->
       <LayerContent>
         <template #header>
           <Stack contentId="about" title="About" />
         </template>
         <template #content>
-          <div>test</div>
           <div class="About">
             <div class="AboutProfileArea">
               <div class="Profile">
@@ -18,18 +26,18 @@
                     <p class="ProfileContetnt--txt">身長：186cm</p>
                     <p class="ProfileContetnt--txt">最終学歴：東北福祉大学</p>
                     <p class="ProfileContetnt--txt">職業：無職☆</p>
-                    <p class="ProfileContetnt--txt">趣味：ファッション、スポーツ</p>
+                    <p class="ProfileContetnt--txt">
+                      趣味：ファッション、スポーツ
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="ProfileImgArea">
-                <img class="ProfileImg" src="../assets/img/img_profile.jpg" alt="">
+                <img class="ProfileImg" src="../assets/img/img_profile.jpg" alt="" />
               </div>
             </div>
             <div class="AboutMessageArea">
-              <div class="MessageHeader">
-                Message
-              </div>
+              <div class="MessageHeader">Message</div>
               <p class="Message--txt">
                 こんにちは、安藤と申します。
                 中学時代に自分に自信がなくなったことがきっかけで、高校で未経験ながらラグビー部に所属。その後、多くの方々に支えられられらたことから今度は自分が目の前の人に自信を与えられるような人になりたいという夢ができました。そんな思いから、ファーストキャリアではリンクアカデミーという会社で叶えたい夢・目指す姿を実現したいというお客様のキャリアに寄り添うお仕事に従事して参りました。
@@ -51,6 +59,14 @@
           </div>
         </template>
       </LayerContent>
+      <LayerContent>
+        <template #header>
+          <Stack contentId="skill" title="Skill" />
+        </template>
+        <template #content>
+          <SkillChart />
+        </template>
+      </LayerContent>
     </div>
   </div>
 </template>
@@ -58,6 +74,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import router from "@/router";
+import SkillChart from "@/components/SkillChart.vue";
 import LayerContent from "@/components/Layer.vue";
 import Stack from "@/components/Stack.vue";
 
@@ -66,6 +83,7 @@ export default defineComponent({
   components: {
     Stack,
     LayerContent,
+    SkillChart,
   },
   setup(props) { },
 });
