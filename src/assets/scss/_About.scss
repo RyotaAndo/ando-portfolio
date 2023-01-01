@@ -1,0 +1,64 @@
+@use "_Forward" as var;
+
+.About {
+    // display: flex;
+
+    .AboutProfileArea {
+        display: flex;
+        align-items: center;
+        width: -webkit-fill-available;
+
+        .Profile {
+            width: 500px;
+
+            .ProfileRadius {
+                z-index: 1;
+                position: relative;
+                width: 450px;
+                height: 450px;
+                border-radius: 50%;
+                background-color: var.$color-black--radius;
+
+                .ProfileContetnt {
+                    z-index: 2;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+
+                    .ProfileContetnt--txt {
+                        @extend .text--title-4__wh;
+                        margin: 16px 0;
+                    }
+
+                }
+            }
+        }
+
+        .ProfileImgArea {
+            display: flex;
+            margin-left: auto;
+
+            .ProfileImg {
+                width: 800px;
+                height: auto;
+            }
+        }
+    }
+
+    .AboutMessageArea {
+        padding: 32px 16px;
+        margin-top: 32px;
+        background-color: var.$color-message-box;
+
+        .MessageHeader {
+            @extend .text--title-2__wh;
+            margin-bottom: 16px
+        }
+
+        .Message--txt {
+            @extend .text--title-4__wh;
+        }
+    }
+}
