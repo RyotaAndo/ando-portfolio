@@ -32,6 +32,9 @@ export default defineComponent({
     },
   },
   setup(props) {
+    // Chart.defaults.font.family = "Lato";
+    Chart.defaults.font.size = 16;
+    // Chart.defaults.color = "#fff";
     // RadarChart 用のデータ
     const chartData: ChartData<"radar"> = {
       labels: [
@@ -45,6 +48,7 @@ export default defineComponent({
         {
           label: "自己評価",
           backgroundColor: "rgba(179,181,198,0.2)",
+          //   backgroundColor: "#fff",
           borderCapStyle: "square",
           //線の色
           borderColor: "rgba(75, 192, 192,1)",
@@ -53,33 +57,44 @@ export default defineComponent({
           //点の周りの色
           pointBorderColor: "#fff",
           //ホバー時の点の背景色
-          pointHoverBackgroundColor: "#fff",
+          pointHoverBackgroundColor: "#f5e107",
           //ホバー時の点の線の色
-          pointHoverBorderColor: "rgba(179,181,198,1)",
+          pointHoverBorderColor: "#fff",
           //線の太さ
           borderWidth: 2,
           data: [5, 4.5, 3.5, 4, 4],
           //点の大きさ
-          pointRadius: 4,
+          pointRadius: 6,
         },
       ],
     };
     const chartOptions = {
       responsive: true,
-      maintainAspectRatio: false,
-      scale: {
-        ticks: {
-          beginAtZero: true,
-          max: 5,
-          min: 0,
-          stepSize: 1,
-          font: {
-            size: 16,
-          },
-        },
+      maintainAspectRatio: true,
+      scales: {
         r: {
+          //グラフの最小値・最大値
+          beginAtZero: true,
+          min: 0,
+          max: 5,
+          stepSize: 1,
+          //背景色
+          backgroundColor: "snow",
+          //グリッドライン
+          grid: {
+            color: "pink",
+          },
+          //アングルライン
+          angleLines: {
+            // display: false,
+            color: "#faed58",
+          },
+          //各項目のラベル
           pointLabels: {
-            fontSize: 20,
+            color: "#fff",
+            font: {
+              size: 16,
+            },
           },
         },
       },
@@ -92,12 +107,4 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
-.SkillChart {
-  display: flex;
-  .ChartArea {
-    width: 600px;
-    height: 400px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>
